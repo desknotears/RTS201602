@@ -4,9 +4,10 @@
 $.vegas('slideshow', {
   delay:7000,
   backgrounds:[
-    { src:'images/backgrounds/railway_station_road_day.jpg', fade:1000 },
-    { src:'images/backgrounds/railway_station_sky_building.jpg', fade:1000 },
-    { src:'images/backgrounds/railway_station_sunset.jpg', fade:1000 }
+    { src:'images/backgrounds201602/railway1.jpg', fade:1000 },
+    { src:'images/backgrounds201602/railway2.jpg', fade:1000 },
+    { src:'images/backgrounds201602/railway3.jpg', fade:1000 },
+    { src:'images/backgrounds201602/railway4.jpg', fade:1000 }
   ]
 });
       

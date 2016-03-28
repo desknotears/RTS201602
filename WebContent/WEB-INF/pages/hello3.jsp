@@ -167,12 +167,12 @@
 					data-wow-offset="30" data-wow-duration="1.5s"
 						data-wow-delay="0.15s">
 					
-						<a href="#booking" class="btn btn-primary custom-button red-btn">
+						<a href="#booking" class="btn btn-primary custom-button blue-btn">
 							Ready To Go
 						</a>
 					
 					<sec:authorize access="isAnonymous()">
-		              		<a href="<c:url value="/login2016.html"/>" class="btn btn-primary custom-button green-btn">
+		              		<a href="<c:url value="/login2016.html"/>" class="btn btn-primary custom-button yellow-btn">
 		              			Sign In
 							</a>							
 					</sec:authorize>
