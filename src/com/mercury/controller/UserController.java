@@ -208,7 +208,7 @@ public class UserController {
 	public ModelAndView registerPage(@ModelAttribute("user") User user,
 			BindingResult result) throws Exception {
 		ModelAndView mav = new ModelAndView();
-		mav.setViewName("/login");
+		mav.setViewName("/hello3");	
 		mav.addObject("title", "This is register page.");
 		UserRole ur = new UserRole(100, "ROLE_USER");
 		user.setRole(ur);
@@ -280,7 +280,7 @@ public class UserController {
 		System.out.println(password);
 		user.setPassword(user.MD5Hashing(password));
 		this.customUserDetailsService.updateUser(user);
-		mav.setViewName("/login");
+		mav.setViewName("/login2016");
 		mav.addObject("title", "Congratulations, " + user.getEmail()
 				+ "! Successfully change your password!");
 		
