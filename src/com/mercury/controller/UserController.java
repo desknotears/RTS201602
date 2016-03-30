@@ -99,7 +99,7 @@ public class UserController {
 	public @ResponseBody
 	ModelAndView memberHello() {
 		ModelAndView mav = new ModelAndView();
-		mav.setViewName("/member/hello");
+		mav.setViewName("/member/hello3");
 		mav.addObject("title", "Hello, welcome to dashboard");
 		mav.addObject("username", this.getUser().getEmail());
 		return mav;
@@ -248,11 +248,11 @@ public class UserController {
 
 		User user = this.customUserDetailsService.activeUser(activation);
 		if (user == null) {
-			mav.setViewName("/hello3");
+			mav.setViewName("redirect:/hello3");
 			mav.addObject("title", "Activation code expired!");
 			return mav;
 		}
-		mav.setViewName("/hello3");
+		mav.setViewName("redirect:/hello3");
 		mav.addObject("title", "Congratulations, " + user.getEmail()
 				+ "! Successfully activated!");
 		user.setEnable(true);
@@ -273,16 +273,16 @@ public class UserController {
 		System.out.println(md5);
 		User user = this.customUserDetailsService.findbypassword(md5);
 		if (user == null) {
-			mav.setViewName("/hello3");
+			mav.setViewName("redirect:/hello3.html");
 			mav.addObject("title", "User not exsit!");
 			return mav;
 		}
 		System.out.println(password);
 		user.setPassword(user.MD5Hashing(password));
 		this.customUserDetailsService.updateUser(user);
-		mav.setViewName("/login2016");
-		mav.addObject("title", "Congratulations, " + user.getEmail()
-				+ "! Successfully change your password!");
+		mav.setViewName("redirect:/main.html");
+//		mav.addObject("title", "Congratulations, " + user.getEmail()
+//				+ "! Successfully change your password!");
 		
 		System.out.println(user);
 		return mav;
