@@ -38,7 +38,7 @@
 <style>
 .body-class {
 	
-	background-image: url(/MyRTS/resource/image201602/login2.jpg);
+	background-image: url(/MyRTS/resource/image201602/login2016.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 }

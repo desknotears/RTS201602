@@ -208,7 +208,7 @@
 					
 					<div class="row">
 						<input class="col-sm-3 col-sm-offset-1 btn btn-primary btn-md"
-							type="reset" ng-click="resetForm()" 
+							type="reset" ="resetForm()" 
 		  					ng-disabled="!isSearchTrainFormChanged()" 
 		  					role="button" />
 						<button class="col-sm-3 col-sm-offset-3 btn btn-primary btn-md" 

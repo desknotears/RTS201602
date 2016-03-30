@@ -73,7 +73,7 @@ public class RTSController {
 		 String referrer = request.getHeader("Referer");
 		 System.out.println(referrer);
 		 request.getSession().setAttribute("url_prior_login", referrer);
-		 return "login";
+		 return "login2016";
 	}
 	
 	@RequestMapping(value = "/index", method = RequestMethod.GET)

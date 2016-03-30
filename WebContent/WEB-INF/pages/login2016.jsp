@@ -22,7 +22,7 @@
 <script src="<c:url value="/resource/md5.js"/>"></script>
 <style>
 .body-class {
-	background-image: url(/MyRTS/resource/image201602/login2.jpg);
+	background-image: url(/MyRTS/resource/image201602/login2016.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 }
@@ -109,7 +109,8 @@
 				id="login-form">
 				<input type="username" name="j_username" id="j_username" /> <input
 					type="password" name="raw_password" id="raw_password"
-					placeholder="Password" /> <input type="password" name="j_password"
+					placeholder="Password" /> 
+				<input type="password" name="j_password"
 					id="j_password" style="display: none">
 				<button type="submit" onclick="encode()">Sign In</button>
 			</form>
