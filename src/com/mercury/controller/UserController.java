@@ -280,7 +280,7 @@ public class UserController {
 		System.out.println(password);
 		user.setPassword(user.MD5Hashing(password));
 		this.customUserDetailsService.updateUser(user);
-		mav.setViewName("redirect:/login2016.html");
+		mav.setViewName("redirect:/main.html");
 //		mav.addObject("title", "Congratulations, " + user.getEmail()
 //				+ "! Successfully change your password!");
 		
