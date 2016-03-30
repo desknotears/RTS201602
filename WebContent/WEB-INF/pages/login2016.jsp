@@ -64,7 +64,7 @@
 <script src="<c:url value="/resource/js/angular/angular.js"/>"></script>
 <style>
 .body-class {
-	background-image: url(resource/image/trainlogin2_wz.jpg);
+	background-image: url(/MyRTS/resource/image201602/login2016.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 }
