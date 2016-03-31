@@ -170,6 +170,13 @@ public class UserController {
 		return mav;
 	}
 	
+	@RequestMapping(value="/member/checkout/failure")
+	public ModelAndView checkoutFailure(){
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("/member/checkout-failure");
+		return mav;
+	}
+	
 	
 	@RequestMapping(value = "/member/search", method = RequestMethod.GET)
 	public ModelAndView searchPannel() {

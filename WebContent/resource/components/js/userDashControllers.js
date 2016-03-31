@@ -317,11 +317,11 @@ dashControllers.controller("dashCheckoutCtrl",['$scope', '$http', '$location', f
   			console.log(data.orderStatus);
   			if(data.orderStatus==1){
  			$scope.$emit('refresh cart');
-  			$location.path('/paidorders');
+  			$location.path('/checkout/success');
   			}
   			else{
   				$scope.$emit('refresh cart');
-  	  			$location.path('/cancelledorders');
+  	  			$location.path('/checkout/failure');
   			}
     	});
 	};

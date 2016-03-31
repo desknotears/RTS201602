@@ -43,6 +43,9 @@ dashApp.config(['$routeProvider',
 	  when('/checkout/success', {
 		  templateUrl: 'checkout/success.html'
 	  }).
+	  when('/checkout/failure', {
+		  templateUrl: 'checkout/failure.html'
+	  }).
 	  otherwise({
 		  redirectTo: '/search'
 	  });
