@@ -116,7 +116,7 @@ public class RTSController {
 		return mav;
 	}
 	
-
+	
 	@RequestMapping(value = "/admin/orderData", method = RequestMethod.GET)
 	public @ResponseBody
 	List<Order> getOrderData() {
