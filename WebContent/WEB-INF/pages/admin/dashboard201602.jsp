@@ -2,17 +2,18 @@
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
 <html lang="en">
-<head>
+	<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bootsrtap Free Admin Template - SIMINTA | Admin Dashboad Template</title>
     <!-- Core CSS - Include with every page -->
-    <link rel="stylesheet" type="text/css" href="<c:url value="/resource/2016/assets/plugins/bootstrap/bootstrap.css"/>">
-    <link rel="stylesheet" type="text/css" href="<c:url value="/resource/2016/assets/font-awesome/css/font-awesome.css"/>">
-    <link rel="stylesheet" type="text/css" href="<c:url value="/resource/2016/assets/plugins/pace/pace-theme-big-counter.css"/>">
-    <link rel="stylesheet" type="text/css" href="<c:url value="/resource/2016/assets/css/style.css"/>">
-    <link rel="stylesheet" type="text/css" href="<c:url value="/resource/2016/assets/css/main-style.css"/>">
+    <link href="assets/plugins/bootstrap/bootstrap.css" rel="stylesheet" />
+    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="assets/plugins/pace/pace-theme-big-counter.css" rel="stylesheet" />
+    <link href="assets/css/style.css" rel="stylesheet" />
+      <link href="assets/css/main-style.css" rel="stylesheet" />
 
 </head>
 
@@ -87,7 +88,10 @@
                         </li>
                     </ul>
                     <!-- end dropdown-messages -->
-                </li>                
+                </li>
+
+                
+
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                         <span class="top-label label label-warning">5</span>  <i class="fa fa-bell fa-3x"></i>
@@ -206,19 +210,16 @@
                         <!--end search section-->
                     </li>
                     <li class="">
-                        <a href="order.html"><i class="fa fa-dashboard fa-fw"></i>Order</a>
+                        <a href="index.html"><i class="fa fa-dashboard fa-fw"></i>Dashboard</a>
+                    </li>         
+                    <li>
+                        <a href="timeline.html"><i class="fa fa-flask fa-fw"></i>Timeline</a>
                     </li>
                     <li>
-                        <a href="train.html"><i class="fa fa-bar-chart-o fa-fw"></i>Train</a>
-                    </li>
-                     <li>
-                        <a href="Station.html"><i class="fa fa-flask fa-fw"></i>Station</a>
+                        <a href="tables.html"><i class="fa fa-table fa-fw"></i>Tables</a>
                     </li>
                     <li>
-                        <a href="Schedule.html"><i class="fa fa-table fa-fw"></i>Schedule</a>
-                    </li>
-                    <li>
-                        <a href="UserTable.html"><i class="fa fa-edit fa-fw"></i>UserTable</a>
+                        <a href="forms.html"><i class="fa fa-edit fa-fw"></i>Forms</a>
                     </li>
                 </ul>
                 <!-- end side-menu -->
@@ -253,5 +254,4 @@
     <script src="assets/scripts/siminta.js"></script>
 
 </body>
-
 </html>

@@ -259,9 +259,9 @@ public class UserController {
 			mav.addObject("title", "Activation code expired!");
 			return mav;
 		}
-		mav.setViewName("redirect:/hello3");
-		mav.addObject("title", "Congratulations, " + user.getEmail()
-				+ "! Successfully activated!");
+		mav.setViewName("login2016");
+//		mav.addObject("title", "Congratulations, " + user.getEmail()
+//				+ "! Successfully activated!");
 		user.setEnable(true);
 		user.geneateActivationCode();
 		while (this.customUserDetailsService.checkActivationCode(user
