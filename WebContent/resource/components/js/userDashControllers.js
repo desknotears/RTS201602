@@ -316,6 +316,7 @@ dashControllers.controller("dashCheckoutCtrl",['$scope', '$http', '$location', f
   			 console.log(data);
   			 $scope.$emit('refresh cart');
   			 $location.path('/paidorders');
+  			 
     	});
 	};
 		
