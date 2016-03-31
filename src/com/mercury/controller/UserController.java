@@ -252,7 +252,7 @@ public class UserController {
 			mav.addObject("title", "Activation code expired!");
 			return mav;
 		}
-		mav.setViewName("redirect:/login2016.html");
+		mav.setViewName("login2016");
 //		mav.addObject("title", "Congratulations, " + user.getEmail()
 //				+ "! Successfully activated!");
 		user.setEnable(true);
