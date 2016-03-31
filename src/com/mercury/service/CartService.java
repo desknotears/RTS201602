@@ -43,7 +43,7 @@ public class CartService {
 	}
 	public void clearCart(){
 		cart.clearCart();
-		cart = Cart.getCart(session);
+//		cart = Cart.getCart(session);
 	}
 	public CartService addTicket(Transit departureTransit, Transit arrivalTransit, int trainNo, 
 			double price, Date departureDateTime, int qty){

@@ -59,7 +59,7 @@
 							type="text" ng-show="editMode" ng-model="selected.zipCode" /></td>
 					</tr>
 				</table>
-			</div>
+			
 
 		<h4>Credit Card Information</h4>
 		<br>
@@ -67,8 +67,8 @@
 			<tbody>
 				<tr>
 					<td class="col-sm-4">First Name:</td>
-					<td><input id="fn" type="text" ng-model="cc.firstName" maxlength=50
-						placeholder={{selected.firstName}} required /></td>
+					<td><input id="fn" type="text" ng-model="cc.firstName" maxlength=50 
+						placeholder="First Name" required /></td>
 				</tr>
 				<tr>
 					<td>Last Name:</td>
@@ -184,4 +184,5 @@
 		<button
 			ng-click="checkout()" ng-disabled="!checkCard(cc.cardNo)"
 			class="col-sm-3 col-sm-offset-8 btn btn-primary btn-md">Submit</button>
+</div>
 </div>

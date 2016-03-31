@@ -101,7 +101,7 @@ public class OrderService {
 				}
 			}
 		}
-
+		System.out.println("*****************"+ isComplete);
 		// Remove entry that didn't book ticket token from cart.
 		Iterator<Ticket> iterT = lRemove.iterator();
 		while (iterT.hasNext()) {

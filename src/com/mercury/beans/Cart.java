@@ -39,9 +39,9 @@ public class Cart {
 	
 	public void clearCart(){
 		
-		
-		this.session.setAttribute(CART_NAME, null); 
-		
+		this.hpTickets=new HashMap<Ticket,Integer>();
+//		this.session.setAttribute(CART_NAME, null); 
+		System.out.println("Congratuations , your  cart is empty");
 	}
 	
 	public void addTicket(Ticket t, int qty){

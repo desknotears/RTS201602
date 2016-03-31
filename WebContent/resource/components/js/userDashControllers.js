@@ -313,9 +313,16 @@ dashControllers.controller("dashCheckoutCtrl",['$scope', '$http', '$location', f
   			data: params,
   			headers: {'Content-Type': 'application/x-www-form-urlencoded'}
   		}).success(function (data) {
-  			 console.log(data);
-  			 $scope.$emit('refresh cart');
-  			 $location.path('/paidorders');
+  			console.log("check the data we got: ");
+  			console.log(data.orderStatus);
+  			if(data.orderStatus==1){
+ 			$scope.$emit('refresh cart');
+  			$location.path('/checkout/success');
+  			}
+  			else{
+  				$scope.$emit('refresh cart');
+  	  			$location.path('/checkout/failure');
+  			}
     	});
 	};
 		

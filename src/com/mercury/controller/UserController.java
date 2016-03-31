@@ -170,6 +170,13 @@ public class UserController {
 		return mav;
 	}
 	
+	@RequestMapping(value="/member/checkout/failure")
+	public ModelAndView checkoutFailure(){
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("/member/checkout-failure");
+		return mav;
+	}
+	
 	
 	@RequestMapping(value = "/member/search", method = RequestMethod.GET)
 	public ModelAndView searchPannel() {
@@ -376,8 +383,11 @@ public class UserController {
 
 		boolean isComplete = this.orderService.bookTickets(cs.getCartTickets(),
 				order);
-		if(isComplete)
+		System.out.println("UserControl    "+ isComplete);
+		if(isComplete){
 			cs.getCartTickets().clear();
+			
+		}
 		order.setUser(null);
 		return order;
 	}

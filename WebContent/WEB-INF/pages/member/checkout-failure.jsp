@@ -20,8 +20,8 @@
 </style>
 
 <section class="session1">
-	<h2 class="success2" align="center" >Congratulations! </h2>
-	<h2 class="success1" align="center" >Your order is successful!</h2>
+	<h2 class="success2" align="center" >Attention: </h2>
+	<h2 class="success1" align="center" >Your order is canceled !</h2>
 </section>
 
 

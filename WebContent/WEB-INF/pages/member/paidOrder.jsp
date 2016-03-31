@@ -1,5 +1,5 @@
 <div class="col-sm-offset-3">
-	<p>past orders: </p>
+	<p>Your paid orders: </p>
 	<table class="table">
 		<thead>
 			<th>Order No.</th>
