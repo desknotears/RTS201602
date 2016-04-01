@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bootsrtap Free Admin Template - SIMINTA | Admin Dashboad Template</title>
+    <title>Dashboard201602</title>
     <!-- Core CSS - Include with every page -->
     <link rel="stylesheet" type="text/css" href="<c:url value="/resource/2016/assets/plugins/bootstrap/bootstrap.css"/>">
     <link rel="stylesheet" type="text/css" href="<c:url value="/resource/2016/assets/font-awesome/css/font-awesome.css"/>">
@@ -29,8 +29,8 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">
-                    <img src="assets/img/logo.png" alt="" />
+                <a class="navbar-brand" href="../main.html">
+                    <img src="../resource/image/trainlogo.jpg" alt="" />
                 </a>
             </div>
             <!-- end navbar-header -->
@@ -182,7 +182,7 @@
                         <!-- user image section-->
                         <div class="user-section">
                             <div class="user-section-inner">
-                                <img src="assets/img/user.jpg" alt="">
+                                <img src="../resource/2016/assets/img/user.jpg" alt="">	
                             </div>
                             <div class="user-info">
                                 <div>Jonny <strong>Deen</strong></div>
@@ -205,6 +205,10 @@
                         </div>
                         <!--end search section-->
                     </li>
+                    <li>
+                        <a href="dashboard.html"><i class="fa fa-sitemap fa-fw"></i>Dashboard</a>
+                    </li>
+                    
                     <li class="">
                         <a href="order.html"><i class="fa fa-dashboard fa-fw"></i>Order</a>
                     </li>
@@ -212,13 +216,13 @@
                         <a href="train.html"><i class="fa fa-bar-chart-o fa-fw"></i>Train</a>
                     </li>
                      <li>
-                        <a href="Station.html"><i class="fa fa-flask fa-fw"></i>Station</a>
+                        <a href="station.html"><i class="fa fa-flask fa-fw"></i>Station</a>
                     </li>
                     <li>
-                        <a href="Schedule.html"><i class="fa fa-table fa-fw"></i>Schedule</a>
+                        <a href="schedule.html"><i class="fa fa-table fa-fw"></i>Schedule</a>
                     </li>
                     <li>
-                        <a href="UserTable.html"><i class="fa fa-edit fa-fw"></i>UserTable</a>
+                        <a href="userTable.html"><i class="fa fa-edit fa-fw"></i>UserTable</a>
                     </li>
                 </ul>
                 <!-- end side-menu -->

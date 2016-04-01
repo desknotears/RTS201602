@@ -480,6 +480,12 @@ public class UserController {
 		mav.setViewName("/admin/userTable");
 		return mav;
 	}
+	@RequestMapping(value="/admin/userTableData", method = RequestMethod.GET)
+	@ResponseBody
+	public List<User> getUserTableDate() {
+		return this.customUserDetailsService.getPd().findAllUser();
+		
+	}
 	@RequestMapping(value = "/admin/pie", method = RequestMethod.GET)
 	public ModelAndView pie() {
 		ModelAndView mav = new ModelAndView();

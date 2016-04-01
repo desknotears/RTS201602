@@ -29,6 +29,7 @@ import com.mercury.beans.TrainSchedule;
 import com.mercury.beans.Transit;
 import com.mercury.beans.User;
 import com.mercury.service.CartService;
+import com.mercury.service.CustomUserDetailsService;
 import com.mercury.service.RailwayService;
 import com.mercury.service.TicketContainer;
 import com.mercury.utils.JavaUtil;
@@ -40,7 +41,7 @@ public class RTSController {
 	
 	private static final Logger logger = Logger.getLogger(RTSController.class);
 
-	
+	private CustomUserDetailsService customUserDetailsService;
 	private RailwayService railwayService;
 	//private CartService cartService;
 	
@@ -136,7 +137,7 @@ public class RTSController {
 	List<TrainSchedule> getScheduleData() {
 		return this.railwayService.getAllSchedule();
 	}
-
+	
 	
 	/*******************************
 	*	Station operation
@@ -531,4 +532,5 @@ public class RTSController {
 		return this.getCartService(session).getCartTicketsQty();
 	}
 
+	
 }
