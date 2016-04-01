@@ -377,12 +377,12 @@ public class UserController {
 		String firstName = (String) request.getParameter("firstName");
 		String lastName = (String) request.getParameter("lastName");
 		String cardNo = (String) request.getParameter("cardNo");
-		String cardType = (String) request.getParameter("cardType");
-		String exp = (String) request.getParameter("exp");
+		String cardType = (String) request.getParameter("paymentBrand");
+		String exp = (String) request.getParameter("expiration");
 		String billingAddr = (String) request.getParameter("billingAddr");
 		String city = (String) request.getParameter("city");
 		String state = (String) request.getParameter("state");
-		int zip = Integer.parseInt(request.getParameter("zip"));
+		int zip = Integer.parseInt(request.getParameter("zipCode"));
 
 		User user = getUser();
 		System.out.println("User ID:" + user.getUserId());

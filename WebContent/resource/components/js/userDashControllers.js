@@ -314,12 +314,12 @@ dashControllers.controller("dashCheckoutCtrl",['$scope', '$http', '$location', f
 	console.log("dashCheckoutCtrl is created");
 	console.log($scope.cc);
 	
-	$scope.checkout = function(){
+	$scope.checkout = function(selected){
 		console.log("checkout!");
 
+		console.log(selected);
 		
-		
-		var params = $.param($scope.cc); 
+		var params = $.param(selected); 
 		console.log("params: "+params);
 	    //delete $http.defaults.headers.common['X-Requested-With'];
   		$http({
