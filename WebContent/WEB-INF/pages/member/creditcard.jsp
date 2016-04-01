@@ -61,8 +61,7 @@
 								<button type="submit" ng-show="editMode"
 									ng-click="editMode=false;saveCard(selected,$index)">Save</button>
 						</span> <span>
-								<button ng-click="removeCard(selected,$index)">Remove</button>
-						</span></td>
+						
 					</tr>
 				</table>
 			</div>

@@ -21,7 +21,7 @@
 				</select>
 				<table id="card" class="table table-bordered table-striped dataTable" role="grid";>
 					
-					<tr ng-hide="!selected">
+					<tr ng-hide="true">
 						<td ><span ng-hide="editMode">{{selected.paymentBrand}}</span>
 							<select ng-show="editMode" ng-model="selected.paymentBrand">
 								<option value="visa">Visa</option>
@@ -58,6 +58,10 @@
 						<td><span ng-hide="editMode">{{selected.zipCode}}</span> <input
 							type="text" ng-show="editMode" ng-model="selected.zipCode" /></td>
 					</tr>
+					
+					
+					
+					
 				</table>
 			
 
@@ -67,17 +71,17 @@
 			<tbody>
 				<tr>
 					<td class="col-sm-4">First Name:</td>
-					<td><input id="fn" type="text" ng-model="cc.firstName" maxlength=50 
+					<td><input id="fn" type="text" ng-model="selected.firstName" maxlength=50 
 						placeholder="First Name" required /></td>
 				</tr>
 				<tr>
 					<td>Last Name:</td>
-					<td><input id="ln" type="text" ng-model="cc.lastName" maxlength=50
+					<td><input id="ln" type="text" ng-model="selected.lastName" maxlength=50
 						placeholder="Last Name" required /></td>
 				</tr>
 				<tr>
 					<td>Credit Card Type</td>
-					<td><select id="cct" ng-model="cc.cardType" required>
+					<td><select id="cct" ng-model="selected.paymentBrand" required>
 							<option value="visa">Visa</option>
 							<option value="master">Master</option>
 							<option value="discover">Discover</option>
@@ -87,16 +91,16 @@
 				<tr>
 					<td>Credit Card No:</td>
 					<td><input id="ccn" type="text" name="cardNo" id="cardNo"
-						ng-model="cc.cardNo" maxlength=20 placeholder="Credit Card Number"
+						ng-model="selected.cardNo" maxlength=20 placeholder="Credit Card Number"
 						required /></td>
 				</tr>
 				<tr>
 					<td>Expiration Date:</td>
-					<td><input id="ed" type="text" ng-model="cc.exp" maxlength=7
+					<td><input id="ed" type="text" ng-model="selected.expiration" maxlength=7
 						placeholder="MM/YYYY" required /></td>
 				</tr>
 				<td>CVV:</td>
-				<td><input id="cvv" type="text" ng-model="cc.cvv" maxlength=4
+				<td><input id="cvv" type="text" ng-model="selected.cvv" maxlength=4
 					placeholder="CVV" required /></td>
 				</tr>
 			</tbody>
@@ -108,17 +112,17 @@
 			<tbody>
 				<tr>
 					<td class="col-sm-4">Address:</td>
-					<td><input id="add" type="text" ng-model="cc.billingAddr" maxlength=100
+					<td><input id="add" type="text" ng-model="selected.billingAddr" maxlength=100
 						placeholder="billing address" required /></td>
 				</tr>
 				<tr>
 					<td>City:</td>
-					<td><input id="city" type="text" ng-model="cc.city" maxlength=30
+					<td><input id="city" type="text" ng-model="selected.city" maxlength=30
 						placeholder="City" required /></td>
 				</tr>
 				<tr>
 					<td>State:</td>
-					<td><select id="state" ng-model="cc.state" required>
+					<td><select id="state" ng-model="selected.state" required>
 							<option value="AL">Alabama</option>
 							<option value="AK">Alaska</option>
 							<option value="AZ">Arizona</option>
@@ -174,7 +178,7 @@
 				</tr>
 				<tr>
 					<td>Zip:</td>
-					<td><input id="zip" type="text" ng-model="cc.zip" maxlength=5
+					<td><input id="zip" type="text" ng-model="selected.zipCode" maxlength=5
 						placeholder="Zip" required /></td>
 				</tr>
 			</tbody>
@@ -182,7 +186,7 @@
 		</table>
 
 		<button
-			ng-click="checkout()" ng-disabled="!checkCard(cc.cardNo)"
-			class="col-sm-3 col-sm-offset-8 btn btn-primary btn-md">Submit</button>
+			ng-click="checkout(selected)" ng-disabled="!checkCard(selected.cardNo)"
+			class="col-sm-3 col-sm-offset-8 btn btn-primary btn-md">Check Out</button>
 </div>
 </div>

@@ -221,6 +221,13 @@ dashControllers.controller("creditcardController", function($scope, $http) {
 	}).success(function(data) {
 		//alert(data);
 		$scope.creditcardData = data;
+		
+		for(i=0;i<10;i++){
+			if(data[i].zipCode-10000<0)
+				data[i].zipCode='0'+data[i].zipCode;
+			
+		}
+		
 	}).error(function(data) {
 		alert("AJAX Error!");
 	});
@@ -240,8 +247,8 @@ dashControllers.controller("creditcardController", function($scope, $http) {
 					headers : {
 						'Content-Type' : 'application/x-www-form-urlencoded'
 					}
-				}).success(function(status) {
-			console.log(status);
+				}).success(function(params) {
+			console.log(params);
 			$scope.creditcardData.splice(index, 1);
 			$scope.selected = null;
 		}).error(function() {
@@ -252,6 +259,14 @@ dashControllers.controller("creditcardController", function($scope, $http) {
 	$scope.saveCard = function(selected) {
 		//alert(selected.cardNo);
 		console.log(selected);
+		
+		console.log('0'+selected.zipCode);
+		
+		while(selected.zipCode.length<5){
+			selected.zipCode='0'+selected.zipCode;
+		}
+		
+		
 		var params = $.param({
 			paymentBrand : selected.paymentBrand,
 			cardId : selected.cardId,
@@ -299,12 +314,12 @@ dashControllers.controller("dashCheckoutCtrl",['$scope', '$http', '$location', f
 	console.log("dashCheckoutCtrl is created");
 	console.log($scope.cc);
 	
-	$scope.checkout = function(){
+	$scope.checkout = function(selected){
 		console.log("checkout!");
 
+		console.log(selected);
 		
-		
-		var params = $.param($scope.cc); 
+		var params = $.param(selected); 
 		console.log("params: "+params);
 	    //delete $http.defaults.headers.common['X-Requested-With'];
   		$http({
@@ -315,6 +330,7 @@ dashControllers.controller("dashCheckoutCtrl",['$scope', '$http', '$location', f
   		}).success(function (data) {
   			console.log("check the data we got: ");
   			console.log(data.orderStatus);
+  				
   			if(data.orderStatus==1){
  			$scope.$emit('refresh cart');
   			$location.path('/checkout/success');
