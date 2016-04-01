@@ -17,6 +17,8 @@ public class User {
 	private int zipCode;
 	private String state;
 	private String activation;
+	private boolean enable;
+	private UserRole role;
 	@Override
 	public String toString() {
 		return "User [userId=" + userId + ", email=" + email + ", activation="
@@ -24,8 +26,7 @@ public class User {
 	}
 
 
-	private boolean enable;
-	private UserRole role;
+	
 	
 	public int getUserId() {
 		return userId;
