@@ -279,10 +279,7 @@
        	  	<div class="row">
                 <div class="col-lg-12">
                     <h1 class="page-header">Administrator Train Page <small> Trains </small></h1>
-                    <div class="alert alert-info alert-dismissable">
-                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                        Welcome to RailwayTicketingSystem administrator train operation page! 
-                    </div>
+                    <p>Welcome, you can edit the train here!</p>
                 </div>
            
           <section class="content">
