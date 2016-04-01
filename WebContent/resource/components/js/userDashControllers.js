@@ -122,7 +122,7 @@ dashControllers.controller('dashProfileCtrl', ['$scope','$http', function($scope
 	});
 }]);
 
-dashControllers.controller('dashOrderCtrl',['$scope', '$http', function($scope, $http){
+dashControllers.controller('dashOrderCtrl',['$scope', '$http', '$location', function($scope, $http, $location){
 	$scope.orders = [];
 	
 	$scope.cancel=function(orderno){
@@ -138,6 +138,7 @@ dashControllers.controller('dashOrderCtrl',['$scope', '$http', function($scope, 
 			data:orderno_param,
 			headers: {'Content-Type': 'application/x-www-form-urlencoded'}
 		}).success(function(data){
+			$location.path('/cancelledorders');
 			return data;
 		})
 	};

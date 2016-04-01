@@ -65,7 +65,7 @@ public class RailwayService {
 	}
 	
 	public void updateTrain(Train train){
-		transitd.deleteByTrain(train);
+//		transitd.deleteByTrain(train);
 		td.update(train);
 		System.out.println(train);
 	}
