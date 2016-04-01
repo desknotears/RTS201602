@@ -90,6 +90,7 @@ public class RailwayService {
 	}
 	
 	public void deleteStation(Station station){
+		transitd.deleteByStation(station);
 		sd.deleteStation(station);
 	}
 	

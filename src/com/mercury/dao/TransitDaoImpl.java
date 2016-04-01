@@ -7,6 +7,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.orm.hibernate3.HibernateTemplate;
 
+import com.mercury.beans.Station;
 import com.mercury.beans.Train;
 import com.mercury.beans.Transit;
 
@@ -86,6 +87,16 @@ public class TransitDaoImpl implements TransitDao {
 		}
 	}
 	
+	@Override
+	public void deleteByStation(Station station) {
+		// TODO Auto-generated method stub
+		int stationNo = station.getStationNo();
+		List<Transit> list = queryTransitsByStationNo(stationNo);
+		for(Transit t:list){
+			delete(t);
+		}
+	}
+	
 	@SuppressWarnings("unchecked")
 	@Override
 	public double queryPriceByStationsAndTrainNo(int departureStationNo,
@@ -119,6 +130,8 @@ public class TransitDaoImpl implements TransitDao {
 			transit = lTransit.get(0);
 		return transit;
 	}
+
+	
 	
 	
 

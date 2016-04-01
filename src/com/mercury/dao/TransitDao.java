@@ -2,6 +2,7 @@ package com.mercury.dao;
 
 import java.util.List;
 
+import com.mercury.beans.Station;
 import com.mercury.beans.Train;
 import com.mercury.beans.Transit;
 
@@ -12,6 +13,7 @@ public interface TransitDao {
 	public void update(Transit transit);
 	public Transit findByNo(int transitNo);
 	public void deleteByTrain(Train train);
+	public void deleteByStation(Station station);
 	public List<Transit> queryTransitsByTrainNo(int trainNo);
 	public List<Transit> queryTransitsByStationNo(int stationNo);
 	public double queryPriceByStationsAndTrainNo(int departureStation,

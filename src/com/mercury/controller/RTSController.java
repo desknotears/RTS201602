@@ -155,7 +155,7 @@ public class RTSController {
 	@RequestMapping(value = "/admin/removeStation", method = RequestMethod.POST)
 	public @ResponseBody
 	int removeStation(HttpServletRequest request, Station station) {
-		System.out.println(station);
+		System.out.println(station.getStationNo());
 		this.railwayService.deleteStation(station);
 		return station.getStationNo();
 	}
