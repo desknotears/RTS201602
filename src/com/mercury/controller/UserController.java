@@ -136,6 +136,18 @@ public class UserController {
 		this.customUserDetailsService.updateCreditCard(card);
 		return card.getCardId();
 	}
+	
+	@RequestMapping(value = "/member/removecreditcard", method = RequestMethod.POST)
+	public @ResponseBody
+	int removeStation(HttpServletRequest request, CreditCard card) {
+		System.out.println(card);
+		User user = this.getUser();
+		card.setUser(user);
+		this.customUserDetailsService.deleteCreditCard(card);
+		return card.getCardId();
+	}
+	
+	
 
 	@RequestMapping(value = "/member/creditcarddata", method = RequestMethod.GET)
 	public @ResponseBody
