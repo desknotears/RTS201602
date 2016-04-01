@@ -19,6 +19,7 @@
 <link rel="stylesheet" type="text/css"
 	href="<c:url value="/resource/2016/assets/css/main-style.css"/>">
 
+<<<<<<< HEAD
 <script src="<c:url value="/resource/js/jquery/jquery-2.1.4.js"/>"></script>
 <script src="<c:url value="/resource/js/angular/angular.js"/>"></script>
 <script src="<c:url value="/resource/js/util.js"/>"></script>
@@ -41,6 +42,32 @@
 		}).error(function(data) {
 			alert("AJAX Error!");
 		});
+=======
+    <script type="text/javascript" src="<c:url value="/resource/newSource/js/jquery-1.10.2.min.js"/>"></script>
+    <script type="text/javascript" src="<c:url value="/resource/newSource/bootstrap/js/bootstrap.min.js"/>"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
+	<style>
+	#add{
+		margin-left:50px;
+	}
+	</style>
+	<script>
+	angular.module("stationModule", [])
+			.controller(
+					"stationController",
+					function($scope, $http) {
+						// Initialization
+						$scope.stationData = [];
+						$http({
+							method : "GET",
+							url : "/MyRTS/resource/station/get/all",
+						}).success(function(data) {
+							// 			alert(data);
+							$scope.stationData = data;
+						}).error(function(data) {
+							alert("AJAX Error!");
+						});
+>>>>>>> d60e0da2c8f26e801bbddcbf31803668c39558d6
 
 		$scope.removeStation = function(index) {
 			var station = $scope.stationData[index];

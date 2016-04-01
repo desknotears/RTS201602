@@ -1,6 +1,16 @@
 
+
+
+<style>
+	#div1{
+	width:auto;
+	height:auto;
+	}
+
+
+</style>
                         
-			<div ng-app="creditcardModule" ng-controller="creditcardController">
+			<div id=div1 ng-app="creditcardModule" ng-controller="creditcardController">
 				<select class="OptionCtrl" ng-model="selected"
 					ng-options="creditcard.cardNo for creditcard in creditcardData">
 					<option value="">Please choose a card</option>
@@ -65,16 +75,8 @@
 					</tr>
 				</table>
 			</div>
-			</section>
+			
                         <div class="panel-body">
                             <div id="shieldui-grid1"></div>
                         </div>
-                    </div>
-                </div>
-       <!--   </div>
 
-     </div>  --> 
-    <!-- /#wrapper -->
-<!-- 
-</body>
-</html> -->
