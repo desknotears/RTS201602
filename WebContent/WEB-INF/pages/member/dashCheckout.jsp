@@ -183,6 +183,6 @@
 
 		<button
 			ng-click="checkout()" ng-disabled="!checkCard(cc.cardNo)"
-			class="col-sm-3 col-sm-offset-8 btn btn-primary btn-md">Submit</button>
+			class="col-sm-3 col-sm-offset-8 btn btn-primary btn-md">Check Out</button>
 </div>
 </div>
