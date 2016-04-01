@@ -21,8 +21,7 @@
 	}
 	</style>
 	<script>
-	angular
-			.module("stationModule", [])
+	angular.module("stationModule", [])
 			.controller(
 					"stationController",
 					function($scope, $http) {
