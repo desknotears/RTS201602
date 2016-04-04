@@ -167,7 +167,7 @@
 							Profile</a></li>
 					<li><a href="#"><i class="fa fa-gear fa-fw"></i>Settings</a></li>
 					<li class="divider"></li>
-					<li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i>Logout</a>
+					<li><a href="/MyRTS/j_spring_security_logout"><i class="fa fa-sign-out fa-fw"></i>Logout</a>
 					</li>
 				</ul> <!-- end dropdown-user --></li>
 			<!-- end main dropdown -->
@@ -188,9 +188,7 @@
 							<img src="../resource/2016/assets/img/user.jpg" alt="">
 						</div>
 						<div class="user-info">
-							<div>
-								Jonny <strong>Deen</strong>
-							</div>
+							<div>Admin</div>
 							<div class="user-text-online">
 								<span class="user-circle-online btn btn-success btn-circle "></span>&nbsp;Online
 							</div>
