@@ -30,14 +30,28 @@
 	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
 <script>
 	var app = angular.module('myApp', []);
-	app.controller('stationController', function($scope, $http) {
+	app.controller('stationController', ['$scope','$http', function($scope, $http) {
 		$scope.stationData = [];
 		$http({
 			method : "GET",
 			url : "/MyRTS/resource/station/get/all",
 		}).success(function(data) {
 			// 			alert(data);
+			console.log(data);
+			var i=0;
+			
 			$scope.stationData = data;
+			
+			while(i<$scope.stationData.length){
+				if($scope.stationData[i].zipCode<1000)
+					$scope.stationData[i].zipCode='00'+$scope.stationData[i].zipCode;
+				else if($scope.stationData[i].zipCode<10000)
+					$scope.stationData[i].zipCode='0'+$scope.stationData[i].zipCode;
+				i++;
+			}
+			
+			
+			
 		}).error(function(data) {
 			alert("AJAX Error!");
 		});
@@ -131,7 +145,7 @@
 			});
 
 		};
-	});
+	}]);
 </script>
 </head>
 

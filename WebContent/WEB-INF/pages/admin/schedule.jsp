@@ -32,6 +32,7 @@
 								$scope.scheduleData[i].departureDate), true,
 								false);
 					}
+					console.log(data);
 				}).error(function(data) {
 			alter("AJAX Error!");
 		});
