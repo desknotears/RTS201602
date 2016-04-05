@@ -104,11 +104,7 @@ dashControllers.controller('dashSearchCtrl', ['$scope', '$http', function($scope
 			data:oParam,
 			headers: {'Content-Type': 'application/x-www-form-urlencoded'}
 		}).success(function(data){
-			/*$http.post("/MyRTS/resource/cart/get/all", {}).success(function(data){
-				$scope.unpaidOrders = data;
-				console.log("refresh cart:");
-				console.log($scope.unpaidOrders);
-			});*/
+			
 			$scope.$emit('refresh cart');
 		});
 	}
@@ -117,9 +113,30 @@ dashControllers.controller('dashSearchCtrl', ['$scope', '$http', function($scope
 dashControllers.controller('dashProfileCtrl', ['$scope','$http', function($scope, $http){
 	console.log("profile ctrl");
 	$http.get('profileData').success(function(data){
-		console.log(data);
+		console.log(data.zipCode);
+		if(data.zipCode<1000)
+			data.zipCode='0'+data.zipCode;
+		if(data.zipCode<10000)
+			data.zipCode='0'+data.zipCode;
+		console.log(data.zipCode);
 		$scope.profile = data;
 	});
+	
+	
+	$scope.saveAccount=function(profile){
+		console.log(profile);
+		var params = $.param(profile); 
+		$http({
+			method: 'POST',
+			url:"/MyRTS/member/profile/save-account/",
+			data: params,
+			headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+		}).success(function(data){
+			return data;
+			
+		})
+		
+	}
 }]);
 
 dashControllers.controller('dashOrderCtrl',['$scope', '$http', '$location', function($scope, $http, $location){
@@ -212,6 +229,7 @@ dashControllers.controller('dashCartPage', ['$scope', '$http', '$location', func
 	$scope.total = $scope.calculateTotal($scope.uos);
 	console.log("uos: "); console.log($scope.uos);
 }]);
+
 
 dashControllers.controller("creditcardController", function($scope, $http) {
 	// Initialization

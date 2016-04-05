@@ -70,7 +70,7 @@
 						</span> <span>
 								<button type="submit" ng-show="editMode"
 									ng-click="editMode=false;saveCard(selected,$index)">Save</button>
-						</span> <span>
+						</span> 
 						
 					</tr>
 				</table>

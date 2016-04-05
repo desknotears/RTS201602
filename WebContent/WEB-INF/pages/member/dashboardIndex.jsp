@@ -114,7 +114,7 @@
          		<ul class="dropdown-menu">
          		<li><a href="<c:url value="#/paidorders"/>">Paid Order</a></li>
   <!--        		<li><a href="<c:url value="#/unpaidorders"/>">Unpaid Order</a></li>	 -->
-         		<li><a href="<c:url value="#/cancelledorders"/>">Cancelled Order</a></li>
+         		<li><a href="<c:url value="#/cancelledorders"/>">Canceled Order</a></li>
          		
         		</ul>
        		</li>

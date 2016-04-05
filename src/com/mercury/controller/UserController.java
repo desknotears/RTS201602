@@ -211,6 +211,37 @@ public class UserController {
 		return mav;
 	}
 	
+	@RequestMapping(value = "/member/profile/save-account", method = RequestMethod.POST)
+	public @ResponseBody
+	int saveAccount(HttpServletRequest request, HttpSession session) {
+		User user=getUser();
+		System.out.println(user.getCity());
+		
+		String firstName = (String) request.getParameter("firstName");
+		String lastName = (String) request.getParameter("lastName");
+		String email = (String) request.getParameter("email");
+		String address = (String) request.getParameter("address");
+		String city = (String) request.getParameter("city");
+		String state = (String) request.getParameter("state");
+		System.out.println(city);
+		System.out.println("zipcode: "+request.getParameter("zipCode"));
+		int zip = Integer.parseInt(request.getParameter("zipCode"));
+		System.out.println(zip);
+		user.setFirstName(firstName);
+		user.setLastName(lastName);
+		user.setEmail(email);
+		user.setAddress(address);
+		user.setCity(city);
+		user.setState(state);
+		user.setZipCode(zip);
+		
+		this.customUserDetailsService.updateUser(user);
+		
+		return user.getUserId();
+	}
+	
+	
+	
 	@RequestMapping(value = "/member/profileData", method = RequestMethod.GET)
 	@ResponseBody
 	public User getprofile() {
@@ -271,7 +302,7 @@ public class UserController {
 			mav.addObject("title", "Activation code expired!");
 			return mav;
 		}
-		mav.setViewName("login2016");
+		mav.setViewName("redirect:/login2016");
 //		mav.addObject("title", "Congratulations, " + user.getEmail()
 //				+ "! Successfully activated!");
 		user.setEnable(true);
