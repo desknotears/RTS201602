@@ -1,7 +1,7 @@
 <div class="col-sm-offset-4" >
 	<table class="table">
 		<tr>
-			<td>User Name1: </td>
+			<td>User FirstName: </td>
 			
 			
 			<td><span ng-hide="editMode">{{profile.firstName}}</span>
@@ -11,7 +11,7 @@
 		</tr>
 		
 		<tr>
-			<td>User Name2: </td>
+			<td>User LastName: </td>
 			
 			
 			<td><span ng-hide="editMode">{{profile.lastName}}</span>
