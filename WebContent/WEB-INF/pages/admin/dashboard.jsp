@@ -21,6 +21,20 @@
 
 </head>
 
+<style>
+
+.d1{
+	position: absolute;
+	top: 30%;
+	left: 40%;
+	height: 30%;
+	width: 50%;
+	
+}
+
+
+</style>
+
 <body>
 	<!--  wrapper -->
 	<div id="wrapper">
@@ -199,6 +213,12 @@
 				<!-- Page Header -->
 				<div class="col-lg-12">
 					<h1 class="page-header">Admin Page</h1>
+				</div>
+				
+				
+				<div class=d1>
+					<h1>Welcome to admin dashboard</h1>
+				
 				</div>
 				<!--End Page Header -->
 			</div>
