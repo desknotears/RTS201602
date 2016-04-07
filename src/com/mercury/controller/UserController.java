@@ -213,7 +213,7 @@ public class UserController {
 	
 	@RequestMapping(value = "/member/profile/save-account", method = RequestMethod.POST)
 	public @ResponseBody
-	int saveAccount(HttpServletRequest request, HttpSession session) {
+	int saveAccount(HttpServletRequest request) {
 		User user=getUser();
 		System.out.println(user.getCity());
 		
