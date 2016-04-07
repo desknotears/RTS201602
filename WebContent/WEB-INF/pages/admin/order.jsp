@@ -36,6 +36,7 @@
 					for (var i = 0; i < $scope.orderData.length; i++) {
 						$scope.orderData[i].date = formatDate(new Date(
 								$scope.orderData[i].orderDate), true, false);
+						console.log($scope.orderData);
 						if ($scope.orderData[i].orderStatus == 2) {
 							$scope.orderData[i].status = "Cancelled";
 							console.log($scope.orderData[i].status);
@@ -255,7 +256,7 @@
 										<th>{{x.orderNo}}</th>
 										<th>{{x.user.email}}</th>
 										<th>{{x.user.userId}}</th>
-										<th>{{x.orderDate}}</th>
+										<th>{{x.date}}</th>
 										<th>{{x.creditCardNo}}</th>
 										<th>{{x.status}}</th>
 									</tr>
