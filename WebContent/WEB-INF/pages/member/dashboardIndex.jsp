@@ -102,14 +102,14 @@
 	    
 	    
 	    <!-- Collect the nav links, forms, and other content for toggling -->
-	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-left:300px;">
-	      <ul class="nav navbar-nav ">
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >
+	      <ul class="nav navbar-nav" style="margin-left:20%">
 	      	
-			<li><a href="#/search" style="margin-left:30px;">Search Train</a><li>
-	        <li><a href="<c:url value="#/profile"/>"  style="margin-left:30px;">Account</a>
+			<li><a href="#/search" >Search Train</a><li>
+	        <li><a href="<c:url value="#/profile"/>" >Account</a>
 	        
 	        
-	        <li class="dropdown" style="margin-left:30px;">
+	        <li class="dropdown">
          		<a  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Orders <span class="caret"></span></a>
          		<ul class="dropdown-menu">
          		<li><a href="<c:url value="#/paidorders"/>">Paid Order</a></li>
@@ -122,9 +122,11 @@
        		<!-- 
 	        <li><a href="<c:url value="#/orders"/>"  style="margin-left:30px;">Order History</a>
 	         -->
-	        <li><a href="<c:url value="#/creditcard"/>"  style="margin-left:30px;">Payment Method</a>
-	        
-	        <li><a href="<c:url value="#/cart-page"/>" style="margin-left:250px;">Cart({{unpaidOrders.length}})</a></li>
+	        <li><a href="<c:url value="#/creditcard"/>" >Payment Method</a>
+	      </ul>
+	      
+	      <ul class="nav navbar-nav navbar-right" style="margin-left:20%">
+	        <li><a href="<c:url value="#/cart-page"/>" >Cart({{unpaidOrders.length}})</a></li>
 	        <li><a href="/MyRTS/j_spring_security_logout">Sign Out</a></li>
 	      </ul>
 	    </div><!-- /.navbar-collapse -->
