@@ -158,17 +158,17 @@
 
 				<!-- HEADING -->
 				<h1 class="intro wow fadeInLeft antimated" data-wow-offset="500"
-					data-wow-duration="4s" data-wow-delay="0.15s">TO TRAVEL IS TO LIVE</h1>
+					data-wow-duration="4s" data-wow-delay="0.15s">Welcome to RTS! </h1>
 				<h3 class="wow fadeInRight antimated white-text" data-wow-offset="500"
-					data-wow-duration="4s" data-wow-delay="0.15s">You Don't Need Magic To Disappear.
-					All You Need Is A Destination.</h3>
+					data-wow-duration="4s" data-wow-delay="0.15s">If you have any questions please contact us!
+					</h3>
 				
 				<div class="row buttons inpage-scroll wow fadeInRight animated"
 					data-wow-offset="30" data-wow-duration="1.5s"
 						data-wow-delay="0.15s">
 					
 						<a href="#booking" class="btn btn-primary custom-button blue-btn">
-							Ready To Go
+							Search
 						</a>
 					
 					<sec:authorize access="isAnonymous()">
@@ -327,6 +327,7 @@
 					          <th>Train No</th>
 					          <th>Total Ticket Quantity</th>
 					          <th>Available Ticket Quantity</th>
+					     
 					          <!-- <th>Booking Quantity</th> -->
 			        		</tr>
 			      		</thead>
@@ -335,6 +336,7 @@
 			          			<td># {{schedule.train.trainNo}}</td>
 			          			<td>{{schedule.train.totalTicketQty}}</td>
 			          			<td>{{schedule.availableTickets}}</td>
+			          			
 			          			<!-- <td><input id="bookingQty" name="bookingQty" type="number" max=100 width=30 placeholder="quantity" ng-model="schedule.bookingQty" /></td> -->
 			        		</tr>
 			      		</tbody>
@@ -352,8 +354,8 @@
 			<div class="col-sm-10 col-sm-offset-1 text-left">
 				<div id="divDisplayTrainTransits"   ng-show="canShowTransits">
 					<h3> Current Selected Train Schedule Detail </h3>
+					<h4 id="currTrainNo">Train No: <span> # {{currSchedule.train.trainNo}}</span></h4>
 					<h4 id="ticketPrice">Ticket Unit Price:<span> $ {{price}} </span></h4>
-					<h4 id="currTrainNo">Train Schedule: <span> # {{currSchedule.train.trainNo}}</span></h4>
 				</div>
 			</div>
 		</div>
@@ -365,13 +367,7 @@
 					
 					<table  width="200" class="table table-striped table-bordered">
 						<thead>
-							<tr>
-								<th>Sequence</th>
-								<th>Transit No</th>
-								<th>Station Name</th>
-								<th>Arrival Time</th>
-								<th>Stop Duration (min)</th>
-							</tr>
+							
 						</thead>
 						<tbody>
 							<tr ng-repeat="transit in transits">

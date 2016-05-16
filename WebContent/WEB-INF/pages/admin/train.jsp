@@ -314,7 +314,7 @@
 
 
 				<div ng-app="trainModule" ng-controller="trainController">
-					<h3>All Stations</h3>
+					<h3>All Trains</h3>
 					<table id="stationList" class="table table-bordered table-striped dataTable" role="grid";>
 						<tr>
 							<th>Train ID</th>
